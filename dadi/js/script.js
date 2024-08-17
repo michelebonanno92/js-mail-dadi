@@ -14,12 +14,13 @@ Consigli del giorno:
 
 */
 
-const userNumberRandom = generateNumberRandom();
+const userNumberRandom = Math.floor(Math.random() * 6) + 1;
 console.log('userNumberRandom' , userNumberRandom , typeof userNumberRandom );
 
 const computerNumberRandom = generateNumberRandom();
 console.log('computerNumberRandom' , computerNumberRandom , typeof computerNumberRandom );
 
+// COSTRUTTO CONDIZIONALE
 if ( userNumberRandom > computerNumberRandom ) {
     alert('VITTORIA UTENTE')
 }
@@ -31,5 +32,5 @@ else {
 }
 
 function generateNumberRandom() {
-    return Math.floor(Math.random() * 6 + 1 );
+    return Math.floor(Math.random() * 6 ) + 1 ;
   }
