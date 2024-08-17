@@ -11,6 +11,8 @@ stampa un messaggio appropriato sull'esito del controllo.
 
  const userListMail = ["emailOne" , "emailTwoo" , "emailThree"] ;
 
+ userListMail.push('ciao');
+
   for ( let i = 0; i < userListMail.length; i++){
    console.log(userListMail[i])
   }
