@@ -34,10 +34,10 @@ stampa un messaggio appropriato sull'esito del controllo.
   
      console.log(found);
 
-     if (found == true){
+     if (found){
        console.log('Si, puoi entrare');
      }
-     else if (found == false){
+     else{
       console.log('No, non puoi entrare');
 
      }
