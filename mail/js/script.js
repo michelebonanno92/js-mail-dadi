@@ -6,22 +6,48 @@ controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull'esito del controllo.
 
  */
- const userMail = prompt('inserisci la tua email:') ;
- console.log('userMail' , userMail , typeof userMail );
+ const userEmail = prompt('inserisci la tua email:') ;
+ console.log('userEmail' , userEmail , typeof userEmail );
 
- const userListMail = ["emailOne" , "emailTwoo" , "emailThree"] ;
+ const users = [
+   "emailOne" ,
+   "emailTwo" , 
+   "emailThree"
+  ];
 
- userListMail.push('ciao');
+ users.push('ciao');
+ users.push('email');
 
-  for ( let i = 0; i < userListMail.length; i++){
-   console.log(userListMail[i])
-  }
+ let found = false;
 
+  for (  let i = 0; i < users.length; i++) {
+    // i = i + 1 oppure i += 1 oppure i++ 
 
-  if ( userListMail.includes(userMail) ){
-    alert('questa email fa parte della lista');
-  }
-  else{
-    alert('questa email non fa parte della lista')
+    if ( users[i] == userEmail){
+      console.log('users[i]', users[i] , typeof users[i]);
+      // console.log('Si, puoi entrare');
+      // i = users.length;
+      found = true ; 
+     }
+        
+     }
+  
+     console.log(found);
 
-  }
+     if (found == true){
+       console.log('Si, puoi entrare');
+     }
+     else if (found == false){
+      console.log('No, non puoi entrare');
+
+     }
+
+  // if ( users.includes(userMail) ){
+  //   console.log('questa email fa parte della lista');
+  //   // alert('questa email fa parte della lista');
+  // }
+  // else{
+  //   console.log('questa email non fa parte della lista');
+  //   alert('questa email non fa parte della lista')
+
+  //  }
